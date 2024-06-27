@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Transform:translate</title>
+    <style>
+     #container {
+            width:1200px;
+            height:200px;
+            margin:40px auto;
+            font-size:11px;
+        }
+     .origin {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 20px 40px;
+     }
+     .origin > div {                
+            width:100px;
+            height:100px;
+            background-color:orange;
+      }
+      h2{
+            clear:left;
+      }
+      #movex:hover {
+        transform: translateX(50px);  /* x축으로(가로) 50px 이동 */
+      }
+      #movey:hover {
+        transform: translateY(20px)  /* [문1]. y축으로(세로) 20px 이동 */
+      }
+      #movexy:hover {
+        transform: translate(10px, 20px);  /* [문2]. x축으로(가로) 10px, y축으로(세로) 20px 이동 */
+      }
+      #scalex:hover{
+        transform: scaleX(2);  /* x축으로(가로) 2배 확대 */ 
+      }
+      #scaley:hover{
+        transform: scaleY(1.5);  /* [문3]. y축으로(세로) 1.5배 확대 */ 
+      } 
+      #scale:hover{
+        transform: scale(0.7);  /* [문4]. x, y축으로(가로, 세로) 0.7배 확대 */ 
+      }
+     
+      #rotate1:hover {
+      transform: rotate(40deg);  /* 시계 방향(오른쪽)으로 40도 회전 */
+    }
+    #rotate2:hover {
+      transform: rotate(-40deg);  /* [문5].시계 반대 방향(왼쪽)으로 40도 회전 */
+    }
+    #pers {
+       perspective:300px;  /* [문6].원근감 추가*/    
+      }
+    .rotatex:hover {
+        transform: rotateX(50deg);  /* x축으로 50도 회전 */ 
+    }
+    .rotatey:hover {
+        transform: rotatey(50deg);  /* y축으로 50도 회전 */ 
+    }
+    .rotatez:hover {
+       transform: rotateZ(50deg);  /*  [문7].z축으로 50도 회전 */ 
+    }
+    .rotatexyz:hover {
+        transform: rotate3d(2.5,1.2,-1.5,55deg);  /* x,y,z축에 방향벡터 지정후 55도 회전 */ 
+    }
+    .skewx:hover{
+        transform : skewX(20deg); /*x축 기준 -25도, y축 기준 -15도 비틀기*/
+    }
+    .skewy:hover{
+        transform: skewY(15deg); /* [문8].y축 기준 15도*/
+    }
+    .skewxy:hover{
+        transform :skew(-25deg, -15deg) /*[문9].x축 기준 -25도, y축 기준 -15도 비틀기*/
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+        </style>
+    </head>
+    <body>      
+        <div id="container">
+            <h2>transform: 변형함수(translate : 이동, scale:크기,rotate :회전,perspective :원근감)</h2>
+            <div class="origin">
+                <div id="movex">translateX(50px)</div>     
+            </div>
+            <div class="origin">
+                <div id="movey" >translateY(20px)</div>    <!--[문10] Y축으로 20px 이동하는 스타일 id 지정-->
+            </div>
+            <div class="origin">
+                <div id="movexy">translate(10px, 20px)</div> <!--[문11] X축으로 10px, Y축으로 20px 이동하는 스타일 id 지정-->        
+            </div>
+            <div class="origin">
+                <div id="scalex">scaleX(2)</div>
+            </div>
+            <div class="origin">
+                <div id="scaley"> scaleY(1.5)</div> <!--[문12] y축으로 1.5배 확대하는 스타일id 지정-->
+            </div>
+            <div class="origin">
+                <div id="scale">scale(0.7)</div>  <!--[문13]. x, y축으로(가로, 세로) 0.7배 확대하는 스타일id 지정-->
+            </div>
+            <div class="origin" id="rotate1">rotate(40deg)
+                <img src="https://i.pinimg.com/736x/ce/1a/5d/ce1a5db06b096ba5db75149198499fb2.jpg"> 
+            </div>
+            <div class="origin" id="rotate2">rotate(-40deg) <!--[문14]. 반시계방향 -40도로 회전하는 스타일id 지정-->
+                <img src="https://i.pinimg.com/564x/2a/7b/32/2a7b32bd1d35c363e5c83cf9409e904d.jpg">                         
+            </div>
+            <div class="origin" id="pers"> <!--[문15]. rotate되는 요소의 부모요소에 perspective 설정하는 id 지정-->
+                <div class="rotatex">perspective x
+                    <img src="https://i.pinimg.com/564x/fe/e8/10/fee810516dac3b51ef12bbf4bf3eac81.jpg" alt="">
+                </div>
+            </div>
+            <div class="origin" id="pers">
+                <div class="rotatey">perspective y <!--[문16]. y축으로 50도 회전하는 클래스 지정-->
+                    <img src="https://i.pinimg.com/736x/96/b9/f2/96b9f28c213eef093818e742628cc443.jpg" alt=""> 
+                </div>
+            </div>
+            <div class="origin" id="pers"> 
+                <div class="rotatez">perspective y
+                    <img src="https://i.pinimg.com/564x/02/3f/72/023f72314c7668a92dbd32181560a782.jpg" alt="">
+                </div>
+            </div>
+            <div class="origin" id="pers">
+                <div class="rotatexyz">perspective xyz
+                    <img src="https://i.pinimg.com/564x/33/52/c0/3352c084d594340dbeaad1f66e52d73a.jpg" alt="">
+                </div>
+            </div>
+            <br>
+            <h2>transform: 변형함수(skew : 비틀기)</h2>
+            <div class="origin" >
+                <div class="skewx">skewx
+                    <img src="https://i.pinimg.com/564x/b3/9a/ba/b39aba90a2be7c28094eed383f515d7f.jpg" alt="">
+                </div>
+            </div>
+            <div class="origin" >
+                <div class="skewy">skewy
+                    <img src="https://i.pinimg.com/736x/94/3a/03/943a03404d7fc60caeae4ff0d7884bfb.jpg" alt="">
+                </div>
+            </div>
+            <div class="origin" >
+                <div class="skewxy">skewxy  <!--[문17]. x축 기준 -25도, y축 기준 -15도 비틀기하는 클래스 지정-->
+                    <img src="https://i.pinimg.com/736x/19/82/03/198203a87a4dbf47b2b5a04c4db2a4fa.jpg" alt="">
+                </div>
+            </div>
+           
+        </div>
+        
+    </body>
+</html>

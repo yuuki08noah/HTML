@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .radial1 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background:blue;
+            background: radial-gradient(circle at 20% 20%, white, blue);
+        }
+
+        .repeat1 {
+            background: red;
+            background: repeating-linear-gradient(yellow, red 20px);
+        }
+
+        .repeat2 {
+            background: #ccc;
+            background: repeating-radial-gradient(circle, white, #ccc 10%);
+        }
+    </style>
+</head>
+<body>
+    <h3>
+        위치키워드를 사용한 원형 그라데이션
+    </h3>
+    <div class="radial1">
+    </div>
+    <h3>그라데이션 반복</h3>
+    <ul>
+        <li class="repeat1"></li>
+        <li class="repeat2"></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Array 객체의 메서드</title>
+</head>
+<body>
+	<script>
+		var nums = [1, 2, 3];
+		var chars = ["a", "b", "c", "d"];
+
+		// 배열 2개 합치기
+		var numsChars = nums.concat(chars);
+		var charsNums = chars.concat(nums);
+		document.write("nums에 chars 합치면 : ", numsChars, "<br> chars에 nums 합치면 : ", charsNums);
+		document.write("<hr>");
+		document.write("구분자 없이 : ", nums, "<br>/ 구분자 지정 : ", chars.join('/'));
+		document.write("<hr>");
+        
+        let num1 = [1, 2, 3, 4, 5];
+        let num2 = [0, 1, 2, 3, 4, 5];
+        document.write("length : ", num1.length, "배열 : ", num1);
+        document.write("<br>");
+        document.write("length : ", num2.length, "배열 : ", num2);
+		document.write("<hr>");
+        document.write("꺼낸요소 : ", chars.pop(), "배열 : ", chars);
+        document.write("<br>");
+        document.write("꺼낸요소 : ", chars.shift(), "배열 : ", chars);
+		document.write("<hr>");
+	</script>
+</body>
+</html>

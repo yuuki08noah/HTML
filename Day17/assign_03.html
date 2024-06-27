@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>라이트박스</title>
+    <link rel="stylesheet" href="css/lightbox.css">
+    <style>
+    .row {
+      width:420px;
+      margin:0 auto;
+    }      
+    .row ul {
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    .row ul li {
+      display:inline-table;        
+    }
+    .pic {
+        width: 300px;
+        height: 300px;
+    }
+    /* 라이트 박스 스타일 */
+    #lightbox {
+      position: fixed;  /* 위치 고정 */
+      width:100%;  /* 너비 */
+      height:100%;  /* 높이 */
+      background-color:rgba(0,0,0,0.7);  /* 배경색 */
+      top:0;  /* 시작 위치 - 위쪽 끝 */
+      left:0; /* 시작 위치 - 왼쪽 끝 */
+      display:none;  /* 화면에서 감추기 */
+    }
+
+  /* 라이트 박스 안의 이미지 */
+    #lightbox img {
+      width:500px;  /* 너비 */
+      height:500px;  /* 높이 */
+      position:absolute;  /* top, left에 의해 위치 지정 */
+      top:50%;  /* 위쪽에서 50% 부터 */
+      left:50%;  /* 왼쪽에서 50% 부터 */
+      transform:translate(-50%, -50%);  /* 요소를 화면 중앙에 표시하기 위해 이동 */
+      border:5px solid #eee; /* 이미지 테두리 */       
+    }
+  </style>
+  </head>
+  <body>
+    <div class="row">
+      <ul>
+        <li><img src="https://pbs.twimg.com/media/GHwZPilWMAAAUBa.jpg:large" class="pic"></li>
+        <li><img src="https://miro.medium.com/v2/resize:fit:760/0*YUCdg-6VlkJDPCa6.jpg" class="pic"></li>
+        <li><img src="https://www.slugmag.com/wp/wp-content/uploads/2024/05/The-Anthology_Cover.webp" class="pic"></li> 
+        <li><img src="https://images.genius.com/b12ff01e8bedf6b52fe1295313dca28f.1000x1000x1.jpg" class="pic"></li>
+        <li><img src="https://images.genius.com/62fc98b3d191b4d47a5f9e1a232b582c.1000x1000x1.png"  class="pic"></li>
+        <li><img src="https://images.genius.com/ecc3fe76b745c350f383cd316e43725c.1000x1000x1.jpg"  class="pic"></li>          
+      </ul>    
+    </div>
+
+    <div id="lightbox">
+			<img src="https://yt3.googleusercontent.com/53QZWTgObzpGD9EKQxbCrCgJsvO5jkdSoiugFllgibLvx9y6NHK396G0HY35pcBxRFfdSk7Qclo=s900-c-k-c0x00ffffff-no-rj" alt="" id="lightboxImage">			
+    </div>
+
+    <script>
+        const pics = document.getElementsByClassName('pic');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        for (i of pics) {
+            i.addEventListener('click', function() {
+                lightbox.style.display='block';
+                lightboxImage.setAttribute('src', this.src);
+            })
+        }
+        lightbox.addEventListener('click', hide);
+        function hide() {
+            console.log("인식함");
+            lightbox.style.display='none';
+        }
+    </script>
+  </body>
+</html>

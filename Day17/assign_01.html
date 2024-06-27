@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM</title>
+	<link rel="stylesheet" href="css/product.css">
+    <style>
+        .small {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+	<div id="container">
+			<div id="prod-pic">
+				<img src="https://upload.wikimedia.org/wikipedia/en/6/6e/Taylor_Swift_%E2%80%93_The_Tortured_Poets_Department_%28album_cover%29.png" alt="The Tortured Poets Department" id="cup" width="200" height="200">
+					<div id="small-pic"> 
+						<img src="https://www.slugmag.com/wp/wp-content/uploads/2024/05/The-Anthology_Cover.webp" class="small">
+						<img src="https://images.genius.com/b12ff01e8bedf6b52fe1295313dca28f.1000x1000x1.jpg" class="small">
+						<img src="https://images.genius.com/62fc98b3d191b4d47a5f9e1a232b582c.1000x1000x1.png" class="small">
+					</div>
+			</div>			
+	</div>
+
+	<script>
+		var cup = document.querySelector("#cup");
+    var smallPics = document.querySelectorAll(".small");
+      
+    for(let i = 0; i < smallPics.length; i++) {
+      smallPics[i].addEventListener("click", changePic);
+    }
+
+    function changePic() {
+      var newPic = this.src;
+      cup.setAttribute("src", newPic);
+    }			
+	</script>
+</body>
+</html>

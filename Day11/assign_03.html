@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url('https://www.shonenjump.com/j/jumpgiga/img/main_giga.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            width: 1000px;
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body id="contentEl">
+    <input type="button" id="b1" value="주축 정렬" />
+    <input type="button" id="b2" value="교차축 정렬" />
+    <script type="text/javascript">
+        const b1 = document.getElementById('b1');
+        b1.addEventListener('click', function () {
+            jc();
+        })
+        const b2 = document.getElementById('b2');
+        b2.addEventListener('click', function () {
+            as();
+        })
+        function jc() {
+            contentEl.style.justifyContent = "center";
+        }
+        function as() {
+            contentEl.style.alignItems= "center";
+        }
+    </script>
+</body>
+
+</html>

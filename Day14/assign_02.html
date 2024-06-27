@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        #button2 {
+            display: none;
+        }
+
+        #description {
+            display: none;
+        }
+
+        #button1 {
+            display: block;
+        }
+        img {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://pbs.twimg.com/media/F6ytmpUWAAAk1RD.jpg">
+
+    <button id="button1"><a href="#" onclick="account()">상세 설명 보기</a></button>
+    <button id="button2"><a href="#" onclick="ccc()">상세 설명 닫기</a></button>
+
+    <div id="description">
+        <h1>하이큐 쓰레기장의 결전</h1>
+        <h3>5월 15일 대개봉</h3>
+        근본입니다.....
+    </div>
+    <script>
+
+        function ccc() {
+            document.querySelector('#description').style.display = 'none';
+            document.querySelector('#button1').style.display = 'block';
+            document.querySelector('#button2').style.display = 'none';
+        }
+        function account() {
+            document.querySelector('#description').style.display = 'block';
+            document.querySelector('#button1').style.display = 'none';
+            document.querySelector('#button2').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

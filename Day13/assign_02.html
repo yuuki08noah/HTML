@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        body {
+            text-align: center;
+            font-family: "Nanum Gothic", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <h2>3의 배수 찾기</h2>
+        <script>
+            const num = prompt("숫자를 입력하세요");
+            let count = 0;
+            for(let i = 3; i<=num;i+=3) {
+                document.write(i + ", ");
+                count++;
+            }
+    
+            document.write(`<br><span style='color:red'>${num}까지의 3의 배수의 갯수 : ${count}</span>`);
+        </script>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: dodgerblue;
+        }
+
+        fieldset {
+            width: 1000px;
+        }
+
+        div {
+            background-color: white;
+            margin: 10px;
+            width: 100px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 20px;
+        }
+
+        .left fieldset {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .right fieldset {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+        }
+
+        .top fieldset {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .bottom fieldset {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="left">
+            <fieldset>
+                <div>menu1</div>
+                <div>menu2</div>
+                <div>menu3</div>
+            </fieldset>
+        </div>
+        <div class="right">
+            <fieldset>
+                <div>menu1</div>
+                <div>menu2</div>
+                <div>menu3</div>
+        </div>
+        <div class="top">
+            <fieldset>
+                <div>menu1</div>
+                <div>menu2</div>
+                <div>menu3</div>
+            </fieldset>
+
+        </div>
+        <div class="bottom">
+            <fieldset>
+                <div>menu1</div>
+                <div>menu2</div>
+                <div>menu3</div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+</html>
